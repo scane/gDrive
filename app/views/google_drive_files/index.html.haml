@@ -1,0 +1,13 @@
+%h2 Files
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+  %tbody
+    - @files.each do |file|
+      %tr
+        %td= file['title']
+        %td
+          = link_to 'View', file['alternateLink'], :target => '_blank'
