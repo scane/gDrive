@@ -5,7 +5,7 @@ Gocov::Application.routes.draw do
   root :to => 'google_drive_files#index'
   #get '/', :to => 'devise/sessions#new'
   devise_for :users, :controllers => { :omniauth_callbacks => 'omniauth_callbacks' }
-  resources :google_drive_files, :only => :index
+  resources :google_drive_files, :only => [:index, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

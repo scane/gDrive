@@ -14,3 +14,4 @@
             %td= file['title']
             %td
               = link_to 'View', file['alternateLink'], :target => '_blank'
+              = link_to 'Delete', google_drive_file_path(file['id']), :method => 'delete'
